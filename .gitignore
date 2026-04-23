@@ -1,4 +1,5 @@
 build/
 node_modules/
 *.md
-!TODO.md
+!README.md
+generate-icons.js

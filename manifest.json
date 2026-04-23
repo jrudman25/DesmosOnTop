@@ -3,6 +3,7 @@
   "name": "Desmos Floating Calculator",
   "version": "1.0.0",
   "description": "A floating, always-on-top Desmos graphing calculator using Picture-in-Picture",
+  "homepage_url": "https://github.com/jrudman25/DesmosOnTop",
   "permissions": [],
   "action": {
     "default_popup": "popup.html",

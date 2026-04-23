@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     pipToggle.title = 'Picture-in-Picture requires Chrome 116+';
   }
 
-  pipToggle.addEventListener('click', async () => {
+  // Shared function to launch PiP from this page context
+  async function launchPiP() {
     if (!pipSupported) return;
 
     try {
@@ -108,5 +109,32 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (err) {
       console.error('PiP failed:', err);
     }
-  });
+  }
+
+  // Toolbar Float button
+  pipToggle.addEventListener('click', launchPiP);
+
+  // Auto-PiP mode: when opened with ?pip=1, show a click-to-float overlay
+  // (Document PiP requires a user gesture, so we need one click)
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('pip') === '1' && pipSupported) {
+    const overlay = document.createElement('div');
+    overlay.className = 'pip-overlay';
+    overlay.innerHTML = `
+      <div class="pip-overlay-content">
+        <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="#7eb8e6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="6" width="40" height="28" rx="4"/>
+          <rect x="24" y="18" width="16" height="12" rx="2" fill="#2d70b3" opacity="0.3"/>
+          <path d="M16 42h16M24 34v8"/>
+        </svg>
+        <p>Click anywhere to float on top</p>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+
+    overlay.addEventListener('click', () => {
+      overlay.remove();
+      launchPiP();
+    });
+  }
 });
