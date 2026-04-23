@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #1a1a2e;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 12px;
+  background: #16213e;
+  border-bottom: 1px solid rgba(45, 112, 179, 0.25);
+  height: 40px;
+}
+
+.toolbar-title {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #7eb8e6;
+}
+
+.toolbar-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.calc-select {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  background: #1a1a2e;
+  color: #a0a0b8;
+  border: 1px solid rgba(45, 112, 179, 0.25);
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.calc-select:hover {
+  border-color: #2d70b3;
+}
+
+.calc-select:focus {
+  outline: none;
+  border-color: #2d70b3;
+  box-shadow: 0 0 0 2px rgba(45, 112, 179, 0.2);
+}
+
+.pip-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  background: #2d70b3;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pip-btn:hover {
+  background: #3a80c4;
+  box-shadow: 0 2px 8px rgba(45, 112, 179, 0.3);
+}
+
+.pip-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+iframe {
+  width: 100%;
+  height: calc(100% - 40px);
+  border: none;
+}

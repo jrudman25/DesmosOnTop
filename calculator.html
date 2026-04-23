@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desmos Calculator</title>
+  <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+  <div class="toolbar">
+    <span class="toolbar-title">Desmos Calculator</span>
+    <div class="toolbar-controls">
+      <select id="calc-mode" class="calc-select">
+        <option value="https://www.desmos.com/calculator">Graphing</option>
+        <option value="https://www.desmos.com/scientific">Scientific</option>
+        <option value="https://www.desmos.com/fourfunction">Basic</option>
+        <option value="https://www.desmos.com/matrix">Matrix</option>
+        <option value="https://www.desmos.com/geometry">Geometry</option>
+      </select>
+      <button id="pip-toggle" class="pip-btn" title="Float on Top (Picture-in-Picture)">
+        <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="1" y="3" width="18" height="12" rx="2"/>
+          <rect x="10" y="8" width="7" height="5" rx="1" fill="currentColor" opacity="0.3"/>
+        </svg>
+        <span>Float</span>
+      </button>
+    </div>
+  </div>
+  <iframe id="desmos-frame" src="https://www.desmos.com/calculator" allow="clipboard-write"></iframe>
+  <script src="calculator.js"></script>
+</body>
+</html>

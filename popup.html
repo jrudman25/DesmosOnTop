@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <div class="header">
+      <svg class="logo" viewBox="0 0 24 24" width="28" height="28">
+        <circle cx="12" cy="12" r="10" fill="none" stroke="#2d70b3" stroke-width="2"/>
+        <path d="M6 16 Q9 6 12 12 Q15 18 18 8" fill="none" stroke="#2d70b3" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <h1>Desmos Float</h1>
+    </div>
+
+    <p class="description">Launch a floating Desmos calculator that stays on top of all your windows.</p>
+
+    <button id="launch-btn" class="launch-btn">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2"/>
+        <path d="M8 21h8M12 17v4"/>
+      </svg>
+      Open Calculator Window
+    </button>
+
+    <button id="launch-pip-btn" class="launch-btn pip-btn">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2"/>
+        <rect x="12" y="9" width="8" height="6" rx="1" fill="currentColor" opacity="0.2"/>
+        <path d="M2 7h20"/>
+      </svg>
+      Float on Top (PiP)
+    </button>
+
+    <p class="hint" id="pip-hint"></p>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
