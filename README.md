@@ -40,6 +40,5 @@ desmosontop/
 ├── popup.html/css/js    # Extension popup (click icon)
 ├── calculator.html/css/js  # Calculator page with PiP toggle
 ├── icons/               # Extension icons (16, 48, 128px)
-├── generate-icons.js    # Icon generator script (dev only)
 └── README.md
 ```

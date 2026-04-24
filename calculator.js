@@ -104,8 +104,35 @@ document.addEventListener('DOMContentLoaded', () => {
         iframe.src = select.value;
       });
 
-      // Close the original calculator window since PiP is now active
-      window.close();
+      // Hide the calculator content and show a status message.
+      // The opener window MUST stay alive — PiP windows are destroyed
+      // when their opener document is closed.
+      document.querySelector('.toolbar').style.display = 'none';
+      desmosFrame.style.display = 'none';
+
+      let status = document.getElementById('pip-status');
+      if (!status) {
+        status = document.createElement('div');
+        status.id = 'pip-status';
+        status.className = 'pip-status';
+        status.innerHTML = `
+          <svg viewBox="0 0 48 48" width="40" height="40" fill="none" stroke="#7eb8e6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="6" width="40" height="28" rx="4"/>
+            <rect x="24" y="18" width="16" height="12" rx="2" fill="#2d70b3" opacity="0.3"/>
+            <path d="M16 42h16M24 34v8"/>
+          </svg>
+          <p>Calculator is floating!</p>
+          <span>You can minimize this window. Closing it will end the float.</span>
+        `;
+        document.body.appendChild(status);
+      }
+
+      // When PiP is closed, restore the calculator
+      pipWindow.addEventListener('pagehide', () => {
+        document.querySelector('.toolbar').style.display = '';
+        desmosFrame.style.display = '';
+        if (status) status.remove();
+      });
     } catch (err) {
       console.error('PiP failed:', err);
     }
