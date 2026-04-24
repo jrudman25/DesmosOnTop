@@ -19,6 +19,7 @@ html, body {
   background: #16213e;
   border-bottom: 1px solid rgba(45, 112, 179, 0.25);
   height: 40px;
+  -webkit-app-region: drag;
 }
 
 .toolbar-title {
@@ -32,6 +33,7 @@ html, body {
   display: flex;
   align-items: center;
   gap: 8px;
+  -webkit-app-region: no-drag;
 }
 
 .calc-select {

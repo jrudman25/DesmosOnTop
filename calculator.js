@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
           background: #16213e;
           border-bottom: 1px solid rgba(45, 112, 179, 0.25);
           height: 36px;
+          -webkit-app-region: drag;
         }
         .toolbar-title {
           font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
           border-radius: 4px;
           padding: 2px 6px;
           cursor: pointer;
+          -webkit-app-region: no-drag;
         }
         .calc-select:focus { outline: 1px solid #2d70b3; }
         iframe { width: 100%; height: calc(100% - 36px); border: none; }

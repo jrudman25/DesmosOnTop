@@ -24,8 +24,8 @@
   "commands": {
     "open-calculator": {
       "suggested_key": {
-        "default": "Alt+D",
-        "mac": "Alt+D"
+        "default": "Alt+Shift+D",
+        "mac": "Alt+Shift+D"
       },
       "description": "Open Desmos Calculator"
     }
