@@ -1,15 +1,15 @@
-# Desmos Floating Calculator — Chrome Extension
+# DesmosOnTop - Floating Calculator Extension
 
-A Chrome extension that provides a floating, always-on-top Desmos calculator using the Document Picture-in-Picture API.
+A Chrome extension that provides a floating, always-on-top Desmos calculator using the Document Picture-in-Picture API. Useful for keeping a graphing calculator visible while working in other applications or browser tabs.
 
 ![Icon](icons/icon128.png)
 
 ## Features
 
-- **Float on Top (PiP)** — Opens Desmos in a Picture-in-Picture window that stays on top of all other browser windows
-- **Popup Window** — Alternative mode that opens Desmos in a resizable Chrome popup window
-- **Multiple Calculator Modes** — Switch between Graphing, Scientific, Basic, Matrix, and Geometry calculators
-- **Dark themed toolbar** — Minimal UI that stays out of the way
+- **Float on Top (PiP)** - Opens Desmos in a Picture-in-Picture window that stays on top of all other browser windows
+- **Popup Window** - Alternative mode that opens Desmos in a resizable Chrome popup window
+- **Multiple Calculator Modes** - Switch between Graphing, Scientific, Basic, Matrix, and Geometry calculators
+- **Dark themed toolbar** - Minimal UI that stays out of the way
 
 ## Installation
 
@@ -23,8 +23,8 @@ A Chrome extension that provides a floating, always-on-top Desmos calculator usi
 
 1. Click the extension icon in your Chrome toolbar
 2. Choose one of two launch modes:
-   - **Open Calculator Window** — Opens a resizable popup window with Desmos
-   - **Float on Top (PiP)** — Opens Desmos in an always-on-top Picture-in-Picture window
+   - **Open Calculator Window** - Opens a resizable popup window with Desmos
+   - **Float on Top (PiP)** - Opens Desmos in an always-on-top Picture-in-Picture window
 3. Use the dropdown in the toolbar to switch between calculator types
 
 ## Requirements
@@ -42,3 +42,7 @@ desmosontop/
 ├── icons/               # Extension icons (16, 48, 128px)
 └── README.md
 ```
+
+## License
+
+MIT

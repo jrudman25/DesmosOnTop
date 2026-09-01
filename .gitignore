@@ -1,5 +1,3 @@
 build/
 node_modules/
-*.md
-!README.md
-generate-icons.js
+*.env
